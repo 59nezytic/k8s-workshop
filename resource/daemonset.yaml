@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd-ds
+spec:
+  selector:
+    matchLabels:
+      name: fluentd-ds
+  updateStrategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: fluentd-ds
+    spec:
+      containers:
+      - name: container-elasticsearch
+        image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
