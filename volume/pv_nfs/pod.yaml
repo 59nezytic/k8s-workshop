@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: web-pvc
+  name: web-pvc2
 spec:
   containers:
   - image: nginx:1.14
@@ -12,4 +12,4 @@ spec:
   volumes:
   - name: html
     persistentVolumeClaim:
-      claimName: myclaim
+      claimName: myclaim2
