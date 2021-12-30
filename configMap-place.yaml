@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: place-configmap
+  namespace: default
+data:
+  place: |
+    univ: SSU
+    lab: DCN-LAB
+
+
+
